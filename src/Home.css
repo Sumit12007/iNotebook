@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Julius+Sans+One&family=Maven+Pro:wght@400;600&family=Monoton&family=Orbitron&family=Play&family=Poppins:wght@400;700&family=Quicksand&family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, p{
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    font-weight: bolder;
+}
+
+.homePage-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    max-width: 90vw;
+}
+
+.note-wrapper{
+    margin-inline: 6rem;
+}
+
+.page-info{
+    max-width: 50%;
+    margin-top: 3rem;
+}
+
+.image-wrapper{
+    max-width: 50%;
+    margin-top: 0.8rem;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: clamp(1.8rem, 1.0774rem + 2.7936vw, 5rem);
+}
+
+.title::first-letter{
+    color: #8a0c8ae8;
+}
+
+.tag{
+    font-size: clamp(1.2rem, 0.85rem + 1.8vw, 2rem);
+}
+
+.description{
+    font-size: clamp(0.85rem, 0.8rem + 1.2vw, 1.2rem);
+}
+
+.createNote{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    background-color: #8a0c8ae8;
+    color: white;
+    font-size: 1.125rem;
+    box-shadow: 0px 0px 10px #6b6b6b;
+    margin-top: 0.5rem;
+}
+
+.createNote .btn-create{
+    text-decoration: none;
+    color: white;
+}
+
+.row{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media only screen and (max-width:990px){
+    .container{
+        display: grid;
+        place-items: center;
+    }
+    
+    .homePage-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-info{
+        max-width: 100%;
+        margin-top: 3rem;
+        padding-inline: 1rem;
+    }
+    
+    .image-wrapper{
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-wrapper img{
+        width: clamp(350px, 50%, 500px);
+        height: 400px;
+    }
+
+    .noteCard-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 400px) and (min-width:260px){
+    .card-body{
+        max-width: 16rem;
+    }
+
+    .image-wrapper img{
+        width: 256px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1990px) and (min-width:1335px){
+    .homePage-wrapper{
+        justify-content: space-between;
+    }
+
+    .page-info{
+        max-width: 40%;
+    }
+    
+    .image-wrapper{
+        max-width: 60%;
+    }
+}
